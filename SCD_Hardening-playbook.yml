@@ -92,12 +92,12 @@
 
     - name: Ensure IPTables is installed
       yum:
-        name: iptables-services
+        name: firewalld
         state: present
 
     - name: Start and enable IPTables
       service:
-        name: iptables
+        name: firewalld
         state: started
         enabled: yes
 
